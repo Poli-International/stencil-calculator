@@ -1,74 +1,131 @@
-// Dark Mode Toggle (Required on ALL tools)
 document.addEventListener('DOMContentLoaded', function() {
-    const darkModeToggle = document.getElementById('darkModeToggle');
+    // ==========================================
+    // THEME LOGIC (Dark/Light Mode)
+    // ==========================================
+    const themeToggle = document.getElementById('darkModeToggle');
     const body = document.body;
+    const toolName = window.location.pathname.split('/').filter(Boolean).pop() || 'poli-tool';
 
-    // Check for saved preference
-    const savedMode = localStorage.getItem('darkMode');
-    if (savedMode === 'enabled') {
-        body.classList.add('dark-mode');
-    }
-
-    // Toggle dark mode
-    if (darkModeToggle) {
-        darkModeToggle.addEventListener('click', function() {
-            body.classList.toggle('dark-mode');
-
-            if (body.classList.contains('dark-mode')) {
-                localStorage.setItem('darkMode', 'enabled');
-            } else {
-                localStorage.setItem('darkMode', 'disabled');
+    function setTheme(theme, save = true) {
+        if (theme === 'light') {
+            body.classList.add('light-mode');
+            body.classList.remove('dark-mode');
+            if (themeToggle) {
+                const icon = themeToggle.querySelector('.dark-mode-icon') || themeToggle;
+                icon.textContent = '☀️';
             }
+        } else {
+            body.classList.add('dark-mode');
+            body.classList.remove('light-mode');
+            if (themeToggle) {
+                const icon = themeToggle.querySelector('.dark-mode-icon') || themeToggle;
+                icon.textContent = '◐';
+            }
+        }
+        if (save) localStorage.setItem('theme', theme);
+    }
+
+    // Init theme
+    const savedTheme = localStorage.getItem('theme') || 'dark';
+    setTheme(savedTheme, false);
+
+    if (themeToggle) {
+        themeToggle.addEventListener('click', () => {
+            const current = body.classList.contains('light-mode') ? 'dark' : 'light';
+            setTheme(current);
         });
     }
-});
 
-// Embed Button Functionality (Required on ALL tools)
-document.addEventListener('DOMContentLoaded', function() {
-    const embedBtn = document.getElementById('embedBtn');
-    const embedModal = document.getElementById('embedModal');
-    const modalClose = document.querySelector('.modal-close');
-    const copyEmbedCode = document.getElementById('copyEmbedCode');
-    const embedCodeTextarea = document.getElementById('embedCode');
+    // Listen for messages from WordPress wrapper
+    window.addEventListener('message', function(event) {
+        if (event.data && event.data.theme) {
+            setTheme(event.data.theme, true);
+        }
+    });
 
-    if (embedBtn && embedModal) {
-        // Get current tool path
-        const currentPath = window.location.pathname;
-        const embedUrl = window.location.origin + currentPath.replace('index.html', 'embed.html');
+    // ==========================================
+    // AUTO-RESIZE PARENT IFRAME
+    // ==========================================
+    function sendHeight() {
+        const height = document.body.scrollHeight + 50; // Buffer
+        window.parent.postMessage({ height: height }, '*');
+    }
 
-        // Generate embed code
-        const embedCode = `<iframe src="${embedUrl}" width="100%" height="800" frameborder="0" style="border: 1px solid #e5e7eb; border-radius: 8px;"></iframe>`;
-        embedCodeTextarea.value = embedCode;
+    // Send height on load and on any interaction
+    sendHeight();
+    window.addEventListener('resize', sendHeight);
+    document.addEventListener('click', () => setTimeout(sendHeight, 100));
+    document.addEventListener('change', () => setTimeout(sendHeight, 100));
+    
+    // Mutation observer to catch dynamic content changes
+    const observer = new MutationObserver(sendHeight);
+    observer.observe(document.body, { childList: true, subtree: true });
 
-        // Show modal
-        embedBtn.addEventListener('click', function() {
-            embedModal.style.display = 'flex';
+    // ==========================================
+    // EMBED MODAL LOGIC
+    // ==========================================
+    const embedBtn = document.getElementById('embedBtn') || document.getElementById('embed-button');
+    const modal = document.getElementById('embedModal') || document.getElementById('embed-modal');
+    const modalClose = document.getElementById('modalClose') || document.querySelector('.modal-close');
+    const copyBtn = document.getElementById('copyEmbedCode');
+    const textarea = document.getElementById('embedCode');
+
+    if (textarea) {
+        const cleanUrl = window.location.href.split('?')[0].split('#')[0];
+        textarea.value = `<iframe src="${cleanUrl}" width="100%" height="800" frameborder="0" style="border:1px solid #333; border-radius:12px;"></iframe>`;
+    }
+
+    if (embedBtn && modal) {
+        embedBtn.addEventListener('click', () => {
+            modal.style.display = 'flex';
+            body.style.overflow = 'hidden';
         });
 
-        // Close modal
         if (modalClose) {
-            modalClose.addEventListener('click', function() {
-                embedModal.style.display = 'none';
+            modalClose.addEventListener('click', () => {
+                modal.style.display = 'none';
+                body.style.overflow = '';
             });
         }
 
-        // Copy code
-        if (copyEmbedCode) {
-            copyEmbedCode.addEventListener('click', function() {
-                embedCodeTextarea.select();
-                document.execCommand('copy');
-                copyEmbedCode.textContent = 'Copied!';
-                setTimeout(() => {
-                    copyEmbedCode.textContent = 'Copy Code';
-                }, 2000);
-            });
-        }
-
-        // Close on outside click
-        window.addEventListener('click', function(e) {
-            if (e.target === embedModal) {
-                embedModal.style.display = 'none';
+        window.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                modal.style.display = 'none';
+                body.style.overflow = '';
             }
         });
     }
+
+    if (copyBtn && textarea) {
+        copyBtn.addEventListener('click', () => {
+            textarea.select();
+            navigator.clipboard.writeText(textarea.value).then(() => {
+                const originalText = copyBtn.innerHTML;
+                copyBtn.innerHTML = '✅ Copied!';
+                setTimeout(() => copyBtn.innerHTML = originalText, 2000);
+            });
+        });
+    }
+
+    // ==========================================
+    // EMAIL FORM SIMULATION
+    // ==========================================
+    const emailForms = document.querySelectorAll('.email-form');
+    emailForms.forEach(form => {
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const input = form.querySelector('input');
+            const btn = form.querySelector('button');
+            const originalText = btn.textContent;
+            
+            btn.textContent = '✅ Subscribed!';
+            btn.disabled = true;
+            input.value = '';
+            
+            setTimeout(() => {
+                btn.textContent = originalText;
+                btn.disabled = false;
+            }, 3000);
+        });
+    });
 });
