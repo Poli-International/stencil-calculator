@@ -1,0 +1,303 @@
+{
+  "needleCartridgeConfigurations": [
+    {
+      "code": "01RL",
+      "name": "Single Needle Round Liner (0.25mm / #08 Bugpin)",
+      "type": "Round Liner",
+      "gauge": "#08 (0.25mm)",
+      "taper": "Super Long Taper",
+      "needleCount": 1,
+      "optimalStroke": "2.5 - 3.2mm",
+      "primaryUse": "Micro-realism, fine single-hair strokes, fine-line lettering, stippling",
+      "skinTraumaIndex": "Low (requires light hand to avoid blowout)"
+    },
+    {
+      "code": "03RL",
+      "name": "3 Round Liner (0.30mm / #10)",
+      "type": "Round Liner",
+      "gauge": "#10 (0.30mm)",
+      "taper": "Long Taper",
+      "needleCount": 3,
+      "optimalStroke": "3.0 - 3.5mm",
+      "primaryUse": "Crisp detailing, small script, geometric linework, tight contours",
+      "skinTraumaIndex": "Low to Moderate"
+    },
+    {
+      "code": "05RL",
+      "name": "5 Round Liner (0.35mm / #12)",
+      "type": "Round Liner",
+      "gauge": "#12 (0.35mm)",
+      "taper": "Standard Medium Taper",
+      "needleCount": 5,
+      "optimalStroke": "3.5 - 4.0mm",
+      "primaryUse": "Standard outlining, neo-traditional accents, medium weight outlines",
+      "skinTraumaIndex": "Moderate"
+    },
+    {
+      "code": "07RL",
+      "name": "7 Round Liner (0.35mm / #12)",
+      "type": "Round Liner",
+      "gauge": "#12 (0.35mm)",
+      "taper": "Medium Taper",
+      "needleCount": 7,
+      "optimalStroke": "3.8 - 4.2mm",
+      "primaryUse": "Traditional American outlines, Japanese outline structures",
+      "skinTraumaIndex": "Moderate"
+    },
+    {
+      "code": "09RL",
+      "name": "9 Round Liner (0.35mm / #12)",
+      "type": "Round Liner",
+      "gauge": "#12 (0.35mm)",
+      "taper": "Medium/Short Taper",
+      "needleCount": 9,
+      "optimalStroke": "4.0 - 4.5mm",
+      "primaryUse": "Heavy traditional lining, bold boundary contours",
+      "skinTraumaIndex": "Moderate to High"
+    },
+    {
+      "code": "11RL",
+      "name": "11 Round Liner (0.35mm / #12)",
+      "type": "Round Liner",
+      "gauge": "#12 (0.35mm)",
+      "taper": "Short Taper",
+      "needleCount": 11,
+      "optimalStroke": "4.0 - 4.5mm",
+      "primaryUse": "Extra-bold bold traditional linework, large back-piece structural frames",
+      "skinTraumaIndex": "High"
+    },
+    {
+      "code": "14RL",
+      "name": "14 Round Liner (0.35mm / #12)",
+      "type": "Round Liner",
+      "gauge": "#12 (0.35mm)",
+      "taper": "Short Taper",
+      "needleCount": 14,
+      "optimalStroke": "4.2 - 4.8mm",
+      "primaryUse": "Maximum gauge heavy traditional and tribal outlines",
+      "skinTraumaIndex": "High"
+    },
+    {
+      "code": "05RS",
+      "name": "5 Round Shader (0.35mm / #12)",
+      "type": "Round Shader",
+      "gauge": "#12 (0.35mm)",
+      "taper": "Medium Taper",
+      "needleCount": 5,
+      "optimalStroke": "3.5 - 3.8mm",
+      "primaryUse": "Tight corner fills, small color packing, soft focal blends",
+      "skinTraumaIndex": "Low"
+    },
+    {
+      "code": "07RS",
+      "name": "7 Round Shader (0.35mm / #12)",
+      "type": "Round Shader",
+      "gauge": "#12 (0.35mm)",
+      "taper": "Medium Taper",
+      "needleCount": 7,
+      "optimalStroke": "3.5 - 4.0mm",
+      "primaryUse": "Color packing in restricted zones, bold textured lines, whip shading",
+      "skinTraumaIndex": "Low to Moderate"
+    },
+    {
+      "code": "09RS",
+      "name": "9 Round Shader (0.35mm / #12)",
+      "type": "Round Shader",
+      "gauge": "#12 (0.35mm)",
+      "taper": "Medium Taper",
+      "needleCount": 9,
+      "optimalStroke": "3.8 - 4.2mm",
+      "primaryUse": "Medium zone saturation, smooth transition gradients, circular shading",
+      "skinTraumaIndex": "Moderate"
+    },
+    {
+      "code": "07CM",
+      "name": "7 Curved / Curved Soft-Edge Magnum (0.30mm / #10)",
+      "type": "Curved Magnum",
+      "gauge": "#10 (0.30mm)",
+      "taper": "Long Taper",
+      "needleCount": 7,
+      "optimalStroke": "3.5 - 4.0mm",
+      "primaryUse": "Delicate portrait shading, smooth feathered gradients without skin biting",
+      "skinTraumaIndex": "Very Low"
+    },
+    {
+      "code": "09CM",
+      "name": "9 Curved / Soft-Edge Magnum (0.30mm / #10)",
+      "type": "Curved Magnum",
+      "gauge": "#10 (0.30mm)",
+      "taper": "Long Taper",
+      "needleCount": 9,
+      "optimalStroke": "3.5 - 4.0mm",
+      "primaryUse": "Realism greywash blending, soft shadow transitions",
+      "skinTraumaIndex": "Very Low"
+    },
+    {
+      "code": "15CM",
+      "name": "15 Curved / Soft-Edge Magnum (0.35mm / #12)",
+      "type": "Curved Magnum",
+      "gauge": "#12 (0.35mm)",
+      "taper": "Medium Taper",
+      "needleCount": 15,
+      "optimalStroke": "3.8 - 4.2mm",
+      "primaryUse": "Large scale smooth gradients, background washes, soft anatomical transitions",
+      "skinTraumaIndex": "Low"
+    },
+    {
+      "code": "23CM",
+      "name": "23 Curved Magnum (0.35mm / #12)",
+      "type": "Curved Magnum",
+      "gauge": "#12 (0.35mm)",
+      "taper": "Medium Taper",
+      "needleCount": 23,
+      "optimalStroke": "4.0 - 4.5mm",
+      "primaryUse": "Full back and torso smooth shading, large background washes",
+      "skinTraumaIndex": "Low"
+    },
+    {
+      "code": "15M1",
+      "name": "15 Standard Weaved Magnum (0.35mm / #12)",
+      "type": "Straight Magnum",
+      "gauge": "#12 (0.35mm)",
+      "taper": "Short Taper",
+      "needleCount": 15,
+      "optimalStroke": "4.0 - 4.5mm",
+      "primaryUse": "Heavy solid color packing, opaque black fills",
+      "skinTraumaIndex": "Moderate"
+    },
+    {
+      "code": "27M1",
+      "name": "27 Standard Magnum (0.35mm / #12)",
+      "type": "Straight Magnum",
+      "gauge": "#12 (0.35mm)",
+      "taper": "Short Taper",
+      "needleCount": 27,
+      "optimalStroke": "4.2 - 4.8mm",
+      "primaryUse": "Tribal blackout fills, massive solid coverage",
+      "skinTraumaIndex": "High"
+    }
+  ],
+  "inkDatabase": [
+    {
+      "id": "dynamic_standard_black",
+      "brand": "Dynamic Color Co.",
+      "name": "Standard Black (BLK)",
+      "category": "black_lining",
+      "densityFactor": 1.15,
+      "bottleSizesOz": [1, 2, 4, 8, 16],
+      "optimalNeedle": "03RL, 07RL, 09RL Precision Lining",
+      "description": "Industry-standard pure micro-dispersed carbon black. Thin carrier allows rapid capillary saturation.",
+      "reachCompliant": true
+    },
+    {
+      "id": "dynamic_triple_black",
+      "brand": "Dynamic Color Co.",
+      "name": "Triple Black (TBK)",
+      "category": "solid_blackout",
+      "densityFactor": 1.35,
+      "bottleSizesOz": [1, 2, 4, 8],
+      "optimalNeedle": "15M1, 23M1, 49M1 Heavy Packing",
+      "description": "Triple pigment concentration designed for dense blackout fill and impenetrable saturation.",
+      "reachCompliant": true
+    },
+    {
+      "id": "panthera_tribal_black",
+      "brand": "Panthera Ink",
+      "name": "Tribal XXX Black",
+      "category": "solid_blackout",
+      "densityFactor": 1.30,
+      "bottleSizesOz": [1, 2, 5],
+      "optimalNeedle": "15-27 Curved Magnum Packing",
+      "description": "Deep glossy black for solid fills and tribal coverage. High molecular stability.",
+      "reachCompliant": true
+    },
+    {
+      "id": "kuro_sumi_imperial_outlining",
+      "brand": "Kuro Sumi",
+      "name": "Imperial Outlining Black",
+      "category": "black_lining",
+      "densityFactor": 1.18,
+      "bottleSizesOz": [1, 2, 4, 6],
+      "optimalNeedle": "05RL, 07RL, 09RL Bold Lines",
+      "description": "Traditional Japanese formulation with refined wash resistance and deep charcoal undertones.",
+      "reachCompliant": true
+    },
+    {
+      "id": "kuro_sumi_greywash_set",
+      "brand": "Kuro Sumi",
+      "name": "Imperial Soft & Dark Greywash Set",
+      "category": "greywash",
+      "densityFactor": 1.05,
+      "bottleSizesOz": [2, 4],
+      "optimalNeedle": "09RS, 15CM Smooth Feathering",
+      "description": "Graduated 4-stage greywash tones for micro-realism portrait gradients.",
+      "reachCompliant": true
+    },
+    {
+      "id": "eternal_standard_lining",
+      "brand": "Eternal Ink",
+      "name": "Standard Lining Black",
+      "category": "black_lining",
+      "densityFactor": 1.12,
+      "bottleSizesOz": [1, 2, 4, 8],
+      "optimalNeedle": "03RL - 09RL All-Round",
+      "description": "Organic pigment base with minimal skin trauma and high heal retention.",
+      "reachCompliant": true
+    },
+    {
+      "id": "eternal_color_palette",
+      "brand": "Eternal Ink",
+      "name": "Primary Color Palette Pack",
+      "category": "color",
+      "densityFactor": 1.20,
+      "bottleSizesOz": [1, 2],
+      "optimalNeedle": "09RS, 15M1 Color Packing",
+      "description": "Water-based non-toxic color spectrum with high lightfastness ratings.",
+      "reachCompliant": true
+    },
+    {
+      "id": "intenze_true_black",
+      "brand": "Intenze Tattoo Ink",
+      "name": "True Black",
+      "category": "solid_blackout",
+      "densityFactor": 1.25,
+      "bottleSizesOz": [1, 2, 4, 12],
+      "optimalNeedle": "07RL, 15CM Solid Work",
+      "description": "Sterilized gamma-ray treated pigment with consistent pigment suspension.",
+      "reachCompliant": true
+    },
+    {
+      "id": "solid_ink_lining_black",
+      "brand": "The Solid Ink",
+      "name": "Lining Black by Federico Ferroni",
+      "category": "black_lining",
+      "densityFactor": 1.22,
+      "bottleSizesOz": [1, 2, 4, 8],
+      "optimalNeedle": "07RL - 14RL Traditional Lines",
+      "description": "Heavy hyper-concentrated line pigment crafted with proprietary natural carriers.",
+      "reachCompliant": true
+    },
+    {
+      "id": "allegory_blak",
+      "brand": "Allegory Ink",
+      "name": "BLAK Signature Line Formula",
+      "category": "black_lining",
+      "densityFactor": 1.20,
+      "bottleSizesOz": [2, 4, 8],
+      "optimalNeedle": "03RL, 05RL, 07RL Crisp Lining",
+      "description": "Smooth liquid dispersion that glides without clogging cartridge membranes.",
+      "reachCompliant": true
+    },
+    {
+      "id": "world_famous_pitch_black",
+      "brand": "World Famous Ink",
+      "name": "Pitch Black Limitless",
+      "category": "solid_blackout",
+      "densityFactor": 1.28,
+      "bottleSizesOz": [1, 2, 4, 8],
+      "optimalNeedle": "15-49 Magnum Solid Packing",
+      "description": "Fully EU REACH compliant blackout pigment with high optical absorption.",
+      "reachCompliant": true
+    }
+  ]
+}
