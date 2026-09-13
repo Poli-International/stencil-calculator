@@ -1,0 +1,19 @@
+@import "tailwindcss";
+
+:root {
+  --carbon-purple: #581c87;
+  --carbon-red: #b91c1c;
+  --carbon-green: #15803d;
+  --phototype-1: #fde5d2;
+  --phototype-2: #f5d0b5;
+  --phototype-3: #d8a885;
+  --phototype-4: #b67b50;
+  --phototype-5: #824e2b;
+  --phototype-6: #4a2c16;
+}
+
+.dark {
+  --carbon-purple: #c084fc;
+  --carbon-red: #f87171;
+  --carbon-green: #4ade80;
+}
