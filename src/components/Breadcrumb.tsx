@@ -9,13 +9,13 @@ export const Breadcrumb: React.FC = () => {
     <nav aria-label={t('ariaBreadcrumb')} className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
       <ol className="flex items-center space-x-2 text-xs font-medium text-slate-500 dark:text-slate-400">
         <li>
-          <a href="#" className="hover:text-blue-600 dark:hover:text-blue-400 transition">
+          <a href="https://poliinternational.com/" target="_blank" rel="noopener noreferrer" className="hover:text-blue-600 dark:hover:text-blue-400 transition">
             {t('navHome')}
           </a>
         </li>
         <ChevronRight className="w-3.5 h-3.5 text-slate-400" />
         <li>
-          <a href="#" className="hover:text-blue-600 dark:hover:text-blue-400 transition">
+          <a href="https://poliinternational.com/tools/" target="_blank" rel="noopener noreferrer" className="hover:text-blue-600 dark:hover:text-blue-400 transition">
             {t('navInnovation')}
           </a>
         </li>

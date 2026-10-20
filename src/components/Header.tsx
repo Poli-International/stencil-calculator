@@ -54,6 +54,7 @@ export const Header: React.FC = () => {
             <option value="es">🇪🇸 ES</option>
             <option value="pt">🇵🇹 PT</option>
             <option value="nl">🇳🇱 NL</option>
+            <option value="th">🇹🇭 TH</option>
           </select>
 
           {/* Unit Toggle */}

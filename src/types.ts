@@ -2,7 +2,7 @@
  * Types & Interfaces for Tattoo Stencil Calculator (Poli International)
  */
 
-export type LanguageCode = 'en' | 'fr' | 'it' | 'de' | 'es' | 'pt' | 'nl';
+export type LanguageCode = 'en' | 'fr' | 'it' | 'de' | 'es' | 'pt' | 'nl' | 'th';
 export type UnitSystem = 'cm' | 'inches';
 
 export interface BodyPartCurvature {
