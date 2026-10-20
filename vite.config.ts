@@ -3,8 +3,11 @@ import react from '@vitejs/plugin-react';
 import path from 'path';
 import {defineConfig} from 'vite';
 
-export default defineConfig(() => {
+export default defineConfig(({ command }) => {
   return {
+    // The built tool is served from poliinternational.com/tools/stencil-calculator/; without
+    // this, preloaded chunks were requested from the site root (the live copy had it patched in).
+    base: command === 'build' ? '/tools/stencil-calculator/' : '/',
     plugins: [react(), tailwindcss()],
     resolve: {
       alias: {
