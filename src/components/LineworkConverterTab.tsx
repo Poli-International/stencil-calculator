@@ -2,6 +2,7 @@ import React, { useState, useRef, useEffect } from 'react';
 import { useApp } from '../context/AppContext';
 import { Upload, Download, Printer, RefreshCw, Layers, CheckCircle2, ShieldCheck } from 'lucide-react';
 
+import { Settings as IcSettings, Target as IcTarget } from 'lucide-react';
 export const LineworkConverterTab: React.FC = () => {
   const { t, showToast } = useApp();
 
@@ -168,7 +169,7 @@ export const LineworkConverterTab: React.FC = () => {
         {/* Controls Panel (5 cols) */}
         <div className="lg:col-span-5 bg-white dark:bg-slate-900 p-6 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-xs space-y-4">
           <h3 className="text-sm font-bold text-slate-900 dark:text-white uppercase tracking-wider">
-            {t('converterSettingsTitle')}
+            <IcSettings size={16} aria-hidden="true" style={{ display: 'inline-block', verticalAlign: '-0.15em', flexShrink: 0 }} /> {t('converterSettingsTitle')}
           </h3>
 
           {/* Upload Input */}
@@ -235,7 +236,7 @@ export const LineworkConverterTab: React.FC = () => {
                 onChange={(e) => setGuideLines(e.target.checked)}
                 className="w-4 h-4 text-blue-600 rounded"
               />
-              <span>{t('lblCrosshairs')}</span>
+              <span><IcTarget size={16} aria-hidden="true" style={{ display: 'inline-block', verticalAlign: '-0.15em', flexShrink: 0 }} /> {t('lblCrosshairs')}</span>
             </label>
           </div>
 

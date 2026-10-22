@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useApp } from '../context/AppContext';
 import { ChevronDown } from 'lucide-react';
 
+import { CircleHelp as IcCircleHelp } from 'lucide-react';
 export const FaqSection: React.FC = () => {
   const { t } = useApp();
   const [openIdx, setOpenIdx] = useState<number | null>(0);
@@ -33,7 +34,7 @@ export const FaqSection: React.FC = () => {
     <section className="bg-white dark:bg-slate-900 p-6 sm:p-8 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-xs space-y-4">
       <div>
         <h2 className="text-lg font-black text-slate-900 dark:text-white flex items-center gap-2">
-          <span>❓</span>
+          <IcCircleHelp size={16} aria-hidden="true" style={{ display: 'inline-block', verticalAlign: '-0.15em', flexShrink: 0 }} />
           <span>{t('faqHeader')}</span>
         </h2>
         <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-400 font-medium mt-0.5">

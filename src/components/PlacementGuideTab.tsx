@@ -3,6 +3,7 @@ import { useApp } from '../context/AppContext';
 import { bodyPartsDatabase } from '../data/bodyParts';
 import { Target, AlertCircle, CheckCircle, Sparkles, ZoomIn } from 'lucide-react';
 
+import { Palette as IcPalette, RefreshCw as IcRefreshCw } from 'lucide-react';
 export const PlacementGuideTab: React.FC = () => {
   const { unit, t, setOpenModal } = useApp();
 
@@ -135,7 +136,7 @@ export const PlacementGuideTab: React.FC = () => {
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-slate-200 dark:border-slate-800 pb-3">
           <div>
             <h3 className="text-base font-black text-slate-900 dark:text-white flex items-center gap-2">
-              <span>🔄</span>
+              <IcRefreshCw size={16} aria-hidden="true" style={{ display: 'inline-block', verticalAlign: '-0.15em', flexShrink: 0 }} />
               <span>{t('twistTitle')}</span>
             </h3>
             <p className="text-xs text-slate-500 dark:text-slate-400">
@@ -149,7 +150,7 @@ export const PlacementGuideTab: React.FC = () => {
 
         <div>
           <label className="text-xs font-bold text-slate-700 dark:text-slate-300 flex justify-between mb-1">
-            <span>{t('lblTwistAngle')}</span>
+            <span><IcRefreshCw size={16} aria-hidden="true" style={{ display: 'inline-block', verticalAlign: '-0.15em', flexShrink: 0 }} /> {t('lblTwistAngle')}</span>
             <span className="text-blue-600 font-extrabold">{twistAngle}°</span>
           </label>
           <input
@@ -196,7 +197,7 @@ export const PlacementGuideTab: React.FC = () => {
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-slate-200 dark:border-slate-800 pb-3">
           <div>
             <h3 className="text-base font-black text-slate-900 dark:text-white flex items-center gap-2">
-              <span>🎨</span>
+              <IcPalette size={16} aria-hidden="true" style={{ display: 'inline-block', verticalAlign: '-0.15em', flexShrink: 0 }} />
               <span>{t('phototypeTitle')}</span>
             </h3>
             <p className="text-xs text-slate-500 dark:text-slate-400">

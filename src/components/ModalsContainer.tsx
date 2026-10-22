@@ -3,6 +3,7 @@ import { useApp } from '../context/AppContext';
 import { bodyPartsDatabase } from '../data/bodyParts';
 import { Copy } from 'lucide-react';
 
+import { Bone as IcBone, Laptop as IcLaptop, Ruler as IcRuler, X as IcX } from 'lucide-react';
 export const ModalsContainer: React.FC = () => {
   const { openModal, setOpenModal, showToast, t } = useApp();
 
@@ -15,14 +16,14 @@ export const ModalsContainer: React.FC = () => {
         <div className="bg-white dark:bg-slate-900 rounded-2xl max-w-xl w-full p-6 border border-slate-200 dark:border-slate-800 shadow-2xl space-y-4">
           <div className="flex justify-between items-center border-b border-slate-200 dark:border-slate-800 pb-3">
             <h3 className="text-lg font-black text-slate-900 dark:text-white flex items-center gap-2">
-              <span>📏</span>
+              <IcRuler size={16} aria-hidden="true" style={{ display: 'inline-block', verticalAlign: '-0.15em', flexShrink: 0 }} />
               <span>{t('modalMeasureTitle')}</span>
             </h3>
             <button
               onClick={() => setOpenModal(null)}
               className="w-8 h-8 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-500 hover:text-slate-900 dark:hover:text-white flex items-center justify-center font-bold cursor-pointer"
             >
-              ✕
+              <IcX size={16} aria-hidden="true" style={{ display: 'inline-block', verticalAlign: '-0.15em', flexShrink: 0 }} /> 
             </button>
           </div>
 
@@ -71,14 +72,14 @@ export const ModalsContainer: React.FC = () => {
         <div className="bg-white dark:bg-slate-900 rounded-2xl max-w-xl w-full p-6 border border-slate-200 dark:border-slate-800 shadow-2xl space-y-4">
           <div className="flex justify-between items-center border-b border-slate-200 dark:border-slate-800 pb-3">
             <h3 className="text-lg font-black text-slate-900 dark:text-white flex items-center gap-2">
-              <span>📐</span>
+              <IcRuler size={16} aria-hidden="true" style={{ display: 'inline-block', verticalAlign: '-0.15em', flexShrink: 0 }} />
               <span>{t('modalMathTitle')}</span>
             </h3>
             <button
               onClick={() => setOpenModal(null)}
               className="w-8 h-8 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-500 hover:text-slate-900 dark:hover:text-white flex items-center justify-center font-bold cursor-pointer"
             >
-              ✕
+              <IcX size={16} aria-hidden="true" style={{ display: 'inline-block', verticalAlign: '-0.15em', flexShrink: 0 }} /> 
             </button>
           </div>
 
@@ -112,14 +113,14 @@ export const ModalsContainer: React.FC = () => {
         <div className="bg-white dark:bg-slate-900 rounded-2xl max-w-2xl w-full p-6 border border-slate-200 dark:border-slate-800 shadow-2xl space-y-4">
           <div className="flex justify-between items-center border-b border-slate-200 dark:border-slate-800 pb-3">
             <h3 className="text-lg font-black text-slate-900 dark:text-white flex items-center gap-2">
-              <span>🦴</span>
+              <IcBone size={16} aria-hidden="true" style={{ display: 'inline-block', verticalAlign: '-0.15em', flexShrink: 0 }} />
               <span>{t('modalAnatomyTitle')}</span>
             </h3>
             <button
               onClick={() => setOpenModal(null)}
               className="w-8 h-8 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-500 hover:text-slate-900 dark:hover:text-white flex items-center justify-center font-bold cursor-pointer"
             >
-              ✕
+              <IcX size={16} aria-hidden="true" style={{ display: 'inline-block', verticalAlign: '-0.15em', flexShrink: 0 }} /> 
             </button>
           </div>
 
@@ -162,14 +163,14 @@ export const ModalsContainer: React.FC = () => {
         <div className="bg-white dark:bg-slate-900 rounded-2xl max-w-lg w-full p-6 border border-slate-200 dark:border-slate-800 shadow-2xl space-y-4">
           <div className="flex justify-between items-center border-b border-slate-200 dark:border-slate-800 pb-3">
             <h3 className="text-lg font-black text-slate-900 dark:text-white flex items-center gap-2">
-              <span>💻</span>
+              <IcLaptop size={16} aria-hidden="true" style={{ display: 'inline-block', verticalAlign: '-0.15em', flexShrink: 0 }} />
               <span>{t('modalEmbedTitle')}</span>
             </h3>
             <button
               onClick={() => setOpenModal(null)}
               className="w-8 h-8 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-500 hover:text-slate-900 dark:hover:text-white flex items-center justify-center font-bold cursor-pointer"
             >
-              ✕
+              <IcX size={16} aria-hidden="true" style={{ display: 'inline-block', verticalAlign: '-0.15em', flexShrink: 0 }} /> 
             </button>
           </div>
 
