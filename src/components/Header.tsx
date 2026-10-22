@@ -47,14 +47,14 @@ export const Header: React.FC = () => {
             onChange={(e) => setLanguage(e.target.value as LanguageCode)}
             className="h-9 px-2 sm:px-2.5 text-xs sm:text-sm font-semibold bg-slate-100 dark:bg-slate-800 text-slate-800 dark:text-slate-200 border border-slate-300 dark:border-slate-700 rounded-lg cursor-pointer hover:bg-slate-200 dark:hover:bg-slate-700 transition"
           >
-            <option value="en">🇬🇧 EN</option>
-            <option value="fr">🇫🇷 FR</option>
-            <option value="it">🇮🇹 IT</option>
-            <option value="de">🇩🇪 DE</option>
-            <option value="es">🇪🇸 ES</option>
-            <option value="pt">🇵🇹 PT</option>
-            <option value="nl">🇳🇱 NL</option>
-            <option value="th">🇹🇭 TH</option>
+            <option value="en">EN</option>
+            <option value="fr">FR</option>
+            <option value="it">IT</option>
+            <option value="de">DE</option>
+            <option value="es">ES</option>
+            <option value="pt">PT</option>
+            <option value="nl">NL</option>
+            <option value="th">TH</option>
           </select>
 
           {/* Unit Toggle */}

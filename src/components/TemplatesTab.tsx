@@ -5,6 +5,7 @@ import { PlacementTemplate } from '../types';
 import { Search, ArrowRight, Eye, Box, Compass } from 'lucide-react';
 import { Anatomical3DVisual } from './Anatomical3DVisual';
 
+import { X as IcX } from 'lucide-react';
 export const TemplatesTab: React.FC = () => {
   const { unit, t, applyTemplateToCalculator } = useApp();
 
@@ -159,7 +160,7 @@ export const TemplatesTab: React.FC = () => {
                 onClick={() => setSelectedTemplate(null)}
                 className="w-8 h-8 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-500 hover:text-slate-900 dark:hover:text-white flex items-center justify-center font-bold transition cursor-pointer"
               >
-                ✕
+                <IcX size={16} aria-hidden="true" style={{ display: 'inline-block', verticalAlign: '-0.15em', flexShrink: 0 }} /> 
               </button>
             </div>
 

@@ -19,6 +19,7 @@ import {
   Scissors
 } from 'lucide-react';
 
+import { BicepsFlexed as IcBicepsFlexed, Brush as IcBrush, Circle as IcCircle, ClipboardList as IcClipboardList, Dna as IcDna, Droplets as IcDroplets, FlaskConical as IcFlaskConical, Hand as IcHand, Map as IcMap, Pencil as IcPencil, Ruler as IcRuler, Save as IcSave, Trash2 as IcTrash2, TrendingUp as IcTrendingUp, X as IcX, Zap as IcZap } from 'lucide-react';
 export const CurvatureCalculatorTab: React.FC = () => {
   const {
     unit,
@@ -171,25 +172,25 @@ export const CurvatureCalculatorTab: React.FC = () => {
             onClick={() => setOpenModal('anatomy_visualizer')}
             className="px-3.5 py-2 text-xs font-bold bg-blue-50 dark:bg-blue-950/60 text-blue-700 dark:text-blue-300 border border-blue-200 dark:border-blue-800 rounded-xl hover:bg-blue-100 dark:hover:bg-blue-900 transition flex items-center gap-1.5 cursor-pointer"
           >
-            🗺️ {t('btnAnatomyVisualizer')}
+            <IcMap size={16} aria-hidden="true" style={{ display: 'inline-block', verticalAlign: '-0.15em', flexShrink: 0 }} /> {t('btnAnatomyVisualizer')}
           </button>
           <button
             onClick={() => setOpenModal('quick_anatomy')}
             className="px-3.5 py-2 text-xs font-bold bg-emerald-50 dark:bg-emerald-950/60 text-emerald-700 dark:text-emerald-300 border border-emerald-200 dark:border-emerald-800 rounded-xl hover:bg-emerald-100 dark:hover:bg-emerald-900 transition flex items-center gap-1.5 cursor-pointer"
           >
-            🧬 {t('btnQuickAnatomyRef')}
+            <IcDna size={16} aria-hidden="true" style={{ display: 'inline-block', verticalAlign: '-0.15em', flexShrink: 0 }} /> {t('btnQuickAnatomyRef')}
           </button>
           <button
             onClick={() => setOpenModal('stencil_guide')}
             className="px-3.5 py-2 text-xs font-bold bg-indigo-50 dark:bg-indigo-950/60 text-indigo-700 dark:text-indigo-300 border border-indigo-200 dark:border-indigo-800 rounded-xl hover:bg-indigo-100 dark:hover:bg-indigo-900 transition flex items-center gap-1.5 cursor-pointer"
           >
-            📋 {t('btnStencilAppGuide')}
+            <IcClipboardList size={16} aria-hidden="true" style={{ display: 'inline-block', verticalAlign: '-0.15em', flexShrink: 0 }} /> {t('btnStencilAppGuide')}
           </button>
           <button
             onClick={() => setOpenModal('how_to_measure')}
             className="px-3.5 py-2 text-xs font-bold bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-300 dark:border-slate-700 rounded-xl hover:bg-slate-200 dark:hover:bg-slate-700 transition flex items-center gap-1.5 cursor-pointer"
           >
-            📏 {t('btnHowToMeasure')}
+            <IcRuler size={16} aria-hidden="true" style={{ display: 'inline-block', verticalAlign: '-0.15em', flexShrink: 0 }} /> {t('btnHowToMeasure')}
           </button>
         </div>
       </div>
@@ -204,7 +205,7 @@ export const CurvatureCalculatorTab: React.FC = () => {
               : 'text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white'
           }`}
         >
-          📐 {t('btnModeStandard')}
+          <IcRuler size={16} aria-hidden="true" style={{ display: 'inline-block', verticalAlign: '-0.15em', flexShrink: 0 }} /> {t('btnModeStandard')}
         </button>
         <button
           onClick={() => setCalcMode('full_sleeve')}
@@ -214,7 +215,7 @@ export const CurvatureCalculatorTab: React.FC = () => {
               : 'text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white'
           }`}
         >
-          ⚡ {t('btnModeFullSleeve')}
+          <IcZap size={16} aria-hidden="true" style={{ display: 'inline-block', verticalAlign: '-0.15em', flexShrink: 0 }} /> {t('btnModeFullSleeve')}
         </button>
       </div>
 
@@ -224,7 +225,7 @@ export const CurvatureCalculatorTab: React.FC = () => {
           <div className="flex items-center justify-between border-b border-slate-200 dark:border-slate-800 pb-4">
             <div>
               <span className="text-xs font-black text-indigo-600 dark:text-indigo-400 uppercase tracking-widest">
-                💪 CONTINUOUS MULTI-JOINT PROJECT MATRIX
+                <IcBicepsFlexed size={16} aria-hidden="true" style={{ display: 'inline-block', verticalAlign: '-0.15em', flexShrink: 0 }} /> CONTINUOUS MULTI-JOINT PROJECT MATRIX
               </span>
               <h3 className="text-lg font-black text-slate-900 dark:text-white mt-1">
                 {t('sleeveModeTitle')}
@@ -242,7 +243,7 @@ export const CurvatureCalculatorTab: React.FC = () => {
             {/* Circumferences */}
             <div className="bg-slate-50 dark:bg-slate-800/40 p-4 rounded-xl border border-slate-200 dark:border-slate-800 space-y-3">
               <h4 className="text-xs font-bold uppercase tracking-wider text-slate-700 dark:text-slate-300">
-                {t('lblAnatomicalCircumferences')}
+                <IcCircle size={16} aria-hidden="true" style={{ display: 'inline-block', verticalAlign: '-0.15em', flexShrink: 0 }} /> {t('lblAnatomicalCircumferences')}
               </h4>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
                 <div>
@@ -296,7 +297,7 @@ export const CurvatureCalculatorTab: React.FC = () => {
             {/* Heights & Parameters */}
             <div className="bg-slate-50 dark:bg-slate-800/40 p-4 rounded-xl border border-slate-200 dark:border-slate-800 space-y-3">
               <h4 className="text-xs font-bold uppercase tracking-wider text-slate-700 dark:text-slate-300">
-                {t('lblVerticalJointParams')}
+                <IcRuler size={16} aria-hidden="true" style={{ display: 'inline-block', verticalAlign: '-0.15em', flexShrink: 0 }} /> {t('lblVerticalJointParams')}
               </h4>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
                 <div>
@@ -335,7 +336,7 @@ export const CurvatureCalculatorTab: React.FC = () => {
         {/* Proportional Scaling Lock Bar */}
         <div className="flex items-center justify-between p-3.5 bg-slate-50 dark:bg-slate-800/60 rounded-xl border border-slate-200 dark:border-slate-700">
           <div className="flex items-center gap-2 text-xs sm:text-sm font-semibold text-slate-700 dark:text-slate-300">
-            <span>{t('propScaling')}</span>
+            <span><IcRuler size={16} aria-hidden="true" style={{ display: 'inline-block', verticalAlign: '-0.15em', flexShrink: 0 }} /> {t('propScaling')}</span>
             <span className="font-bold text-blue-600 dark:text-blue-400">1 : {aspectRatio.toFixed(2)}</span>
           </div>
           <button
@@ -355,14 +356,14 @@ export const CurvatureCalculatorTab: React.FC = () => {
         <div className="p-4 bg-slate-50 dark:bg-slate-800/40 rounded-xl border border-slate-200 dark:border-slate-800 space-y-3">
           <div className="flex flex-wrap items-center justify-between gap-2">
             <span className="text-xs sm:text-sm font-bold text-slate-900 dark:text-white flex items-center gap-1.5">
-              {t('dragBoxHeader')}
+              <IcHand size={16} aria-hidden="true" style={{ display: 'inline-block', verticalAlign: '-0.15em', flexShrink: 0 }} /> {t('dragBoxHeader')}
             </span>
             <div className="flex items-center gap-2">
               <button
                 onClick={handleAutoFitBody}
                 className="px-2.5 py-1 text-xs font-bold bg-sky-100 dark:bg-sky-950/80 text-sky-700 dark:text-sky-300 border border-sky-200 dark:border-sky-800 rounded-lg hover:bg-sky-200 dark:hover:bg-sky-900 transition cursor-pointer"
               >
-                📐 {t('btnAutoFitBody')}
+                <IcRuler size={16} aria-hidden="true" style={{ display: 'inline-block', verticalAlign: '-0.15em', flexShrink: 0 }} /> {t('btnAutoFitBody')}
               </button>
               <span className="px-2.5 py-1 text-xs font-extrabold bg-blue-600 text-white rounded-full">
                 {designWidth} × {designHeight} {unit}
@@ -459,7 +460,7 @@ export const CurvatureCalculatorTab: React.FC = () => {
         <div className="bg-white dark:bg-slate-900 p-6 rounded-2xl border-2 border-blue-500/40 dark:border-blue-500/30 shadow-md space-y-6">
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-slate-200 dark:border-slate-800 pb-4">
             <h3 className="text-lg font-black text-slate-900 dark:text-white flex items-center gap-2">
-              <span>📏</span>
+              <IcRuler size={16} aria-hidden="true" style={{ display: 'inline-block', verticalAlign: '-0.15em', flexShrink: 0 }} />
               <span>{t('resultsTitle')}</span>
             </h3>
             <span className="px-3 py-1 text-xs font-extrabold bg-blue-100 dark:bg-blue-950/80 text-blue-700 dark:text-blue-300 rounded-full border border-blue-200 dark:border-blue-800 self-start sm:self-auto">
@@ -512,7 +513,7 @@ export const CurvatureCalculatorTab: React.FC = () => {
                   onClick={() => saveCurrentConfig()}
                   className="flex-1 py-2 text-xs font-bold bg-slate-900 dark:bg-white text-white dark:text-slate-900 rounded-lg hover:opacity-90 transition flex items-center justify-center gap-1 cursor-pointer"
                 >
-                  <span>💾</span>
+                  <IcSave size={16} aria-hidden="true" style={{ display: 'inline-block', verticalAlign: '-0.15em', flexShrink: 0 }} />
                   <span>{t('btnSave')}</span>
                 </button>
               </div>
@@ -544,9 +545,9 @@ export const CurvatureCalculatorTab: React.FC = () => {
                 <span>{t('suppliesTitle')}</span>
               </div>
               <div className="text-xs space-y-0.5 pt-1 text-slate-600 dark:text-slate-400 font-medium">
-                <div>✏️ <strong className="text-slate-900 dark:text-white">{t('lblLining')}</strong> {activeCalculation.liningNeedles}</div>
-                <div>🖌️ <strong className="text-slate-900 dark:text-white">{t('lblShading')}</strong> {activeCalculation.shadingNeedles}</div>
-                <div>🧪 <strong className="text-slate-900 dark:text-white">{t('lblPrep')}</strong> {activeCalculation.inkCapsPrep}</div>
+                <div><IcPencil size={16} aria-hidden="true" style={{ display: 'inline-block', verticalAlign: '-0.15em', flexShrink: 0 }} /> <strong className="text-slate-900 dark:text-white">{t('lblLining')}</strong> {activeCalculation.liningNeedles}</div>
+                <div><IcBrush size={16} aria-hidden="true" style={{ display: 'inline-block', verticalAlign: '-0.15em', flexShrink: 0 }} /> <strong className="text-slate-900 dark:text-white">{t('lblShading')}</strong> {activeCalculation.shadingNeedles}</div>
+                <div><IcFlaskConical size={16} aria-hidden="true" style={{ display: 'inline-block', verticalAlign: '-0.15em', flexShrink: 0 }} /> <strong className="text-slate-900 dark:text-white">{t('lblPrep')}</strong> {activeCalculation.inkCapsPrep}</div>
               </div>
             </div>
           </div>
@@ -558,7 +559,7 @@ export const CurvatureCalculatorTab: React.FC = () => {
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-slate-200 dark:border-slate-800 pb-3">
           <div>
             <h3 className="text-base font-black text-slate-900 dark:text-white flex items-center gap-2">
-              <span>📈</span>
+              <IcTrendingUp size={16} aria-hidden="true" style={{ display: 'inline-block', verticalAlign: '-0.15em', flexShrink: 0 }} />
               <span>{t('dermalElasticityTitle')}</span>
             </h3>
             <p className="text-xs text-slate-500 dark:text-slate-400">
@@ -610,7 +611,7 @@ export const CurvatureCalculatorTab: React.FC = () => {
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-slate-200 dark:border-slate-800 pb-3">
           <div>
             <h3 className="text-base font-black text-slate-900 dark:text-white flex items-center gap-2">
-              <span>🧴</span>
+              <IcDroplets size={16} aria-hidden="true" style={{ display: 'inline-block', verticalAlign: '-0.15em', flexShrink: 0 }} />
               <span>{t('gelOptimizerTitle')}</span>
             </h3>
             <p className="text-xs text-slate-500 dark:text-slate-400">
@@ -704,7 +705,7 @@ export const CurvatureCalculatorTab: React.FC = () => {
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-slate-200 dark:border-slate-800 pb-3">
           <div>
             <h3 className="text-base font-black text-slate-900 dark:text-white flex items-center gap-2">
-              <span>💾</span>
+              <IcSave size={16} aria-hidden="true" style={{ display: 'inline-block', verticalAlign: '-0.15em', flexShrink: 0 }} />
               <span>{t('historyTitle')}</span>
             </h3>
             <p className="text-xs text-slate-500 dark:text-slate-400">
@@ -716,7 +717,7 @@ export const CurvatureCalculatorTab: React.FC = () => {
               onClick={clearAllConfigs}
               className="px-3 py-1.5 text-xs font-bold text-rose-600 dark:text-rose-400 bg-rose-50 dark:bg-rose-950/60 border border-rose-200 dark:border-rose-800 rounded-lg hover:bg-rose-100 transition cursor-pointer"
             >
-              {t('clearSavedHistory')}
+              <IcTrash2 size={16} aria-hidden="true" style={{ display: 'inline-block', verticalAlign: '-0.15em', flexShrink: 0 }} /> {t('clearSavedHistory')}
             </button>
           )}
         </div>
@@ -757,7 +758,7 @@ export const CurvatureCalculatorTab: React.FC = () => {
                         onClick={() => deleteSavedConfig(cfg.id)}
                         className="text-rose-600 hover:text-rose-700 font-bold cursor-pointer"
                       >
-                        ✕
+                        <IcX size={16} aria-hidden="true" style={{ display: 'inline-block', verticalAlign: '-0.15em', flexShrink: 0 }} /> 
                       </button>
                     </td>
                   </tr>
